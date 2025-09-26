@@ -1,0 +1,29 @@
+{
+  "service": {
+    "name": "crypto-node-service",
+    "version": "1.0.0",
+    "description": "Crypto node service using Riptide SDK",
+    "port": 3000,
+    "environment": "development"
+  },
+  "riptide": {
+    "enabled": true,
+    "heartbeatInterval": 30000,
+    "statusCheckInterval": 60000,
+    "metricsEnabled": true,
+    "logging": {
+      "level": "info",
+      "format": "json"
+    }
+  },
+  "crypto": {
+    "network": "mainnet",
+    "nodeType": "validator",
+    "consensus": "proof-of-stake"
+  },
+  "monitoring": {
+    "healthCheckPath": "/health",
+    "metricsPath": "/metrics",
+    "statusPath": "/status"
+  }
+}
